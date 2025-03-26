@@ -1,5 +1,5 @@
 import React from "react";
-import { useNavigate } from "react-router-dom"; // Import useNavigate
+import { Link, useNavigate } from "react-router-dom"; // Import useNavigate
 import mainLogoDark from "../../assets/nav_icons/insta_dark.png";
 import SearchBar from "./SearchBar";
 import NavIcon from "./NavIcon";
@@ -18,19 +18,31 @@ const Navbar = ({ userResult }) => {
     <header>
       <nav className="navbar">
         <div className="logo-box" onClick={() => navigate("/")}>
-          {" "}
-          {/* Navigate to home */}
-          <img src={mainLogoDark} alt="Main Logo" />
-          <FaInstagram className="main-logo-small" />
+          <a href="/">
+            <img src={mainLogoDark} alt="Main Logo" />
+          </a>
+          <a href="/">
+            <FaInstagram className="main-logo-small" />
+          </a>
         </div>
         <div className="navigators">
           <SearchBar />
           <div className="nav-links">
-            <NavIcon Icon={GoHomeFill} />
-            <NavIcon Icon={LiaFacebookMessenger} />
-            <NavIcon Icon={CiSquarePlus} />
-            <NavIcon Icon={IoCompassOutline} />
-            <NavIcon Icon={IoMdHeartEmpty} />
+            <a href="/">
+              <NavIcon Icon={GoHomeFill} />
+            </a>
+            <a href="/">
+              <NavIcon Icon={LiaFacebookMessenger} />
+            </a>
+            <a href="/">
+              <NavIcon Icon={CiSquarePlus} />
+            </a>
+            <a href="/">
+              <NavIcon Icon={IoCompassOutline} />
+            </a>
+            <a href="/">
+              <NavIcon Icon={IoMdHeartEmpty} />
+            </a>
             <img src={userResult.data.profile_pic_url} id="user-image" alt="User Nav Image" />
           </div>
         </div>
