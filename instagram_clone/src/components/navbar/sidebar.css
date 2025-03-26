@@ -1,0 +1,44 @@
+.side-bar {
+    position: fixed;
+    right: 0;
+    top: 0;
+}
+
+.menu-button {
+    position: absolute;
+    top: 30px;
+    right: 20px;
+    font-size: 28px;
+    cursor: pointer;
+    background: none;
+    border: none;
+    color: var(--nav-color);
+    z-index: 1;
+}
+
+.side-menu {
+    position: absolute;
+    top: 0;
+    left: 0;
+    width: 250px;
+    height: 100vh;
+    background-color: var(--nav-bg-color);
+    color: white;
+    padding: 30px;
+    transition: 0.3s ease;
+    opacity: 0;
+}
+
+.side-menu.open {
+    left: -250px;
+    opacity: 1;
+}
+
+.side-menu ul {
+    list-style-type: none;
+    padding: 0;
+}
+
+.side-menu li {
+    margin: 15px 0;
+}
