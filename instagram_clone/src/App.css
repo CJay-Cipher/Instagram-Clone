@@ -23,6 +23,7 @@ body {
   --main-body-color: #fff;
   --main-body-color2: #c1c1c1;
   --main-body-color3: #e63939;
+  --main-body-color4: #f8b63b;
   --button-border-color: #c9c9c9;
 }
 .light-mode {
@@ -94,7 +95,7 @@ body {
   width: 100vw;
   display: flex;
   flex-direction: column;
-  gap: 50px;
+  gap: 20px;
   justify-content: center;
   align-items: center;
 }
@@ -126,9 +127,17 @@ body {
 .loader::after {
   margin: 8px;
 }
-.loader-container p {
+.loader-container .loader-subtext-one {
+  margin-top: 30px;
   font-size: 20px;
+  text-align: center;
   color: var(--main-body-color);
+}
+.loader-container .loader-subtext-two {
+  font-size: 15px;
+  text-align: center;
+  font-weight: lighter;
+  color: var(--main-body-color4);
 }
 @keyframes l16 {
   100% {

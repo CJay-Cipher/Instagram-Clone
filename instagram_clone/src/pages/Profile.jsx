@@ -64,7 +64,12 @@ function Profile() {
     return (
       <div className="loader-container">
         <div className="loader"></div>
-        <p>Fetching Data...</p>
+        <p className="loader-subtext-one">Fetching Data...</p>
+        <p className="loader-subtext-two">
+          This API is provided free of charge.
+          <br />
+          Please allow some time for data to load.
+        </p>
       </div>
     );
   }
